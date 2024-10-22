@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: MoviePlanet
+  datasource:
+    url: jdbc:mysql://localhost:3306/mymoviereviewdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: MovieReviewCommunity  # 数据库用户名
+    password: Gxy2023211772          # 数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update                # 自动更新数据库模式
+    show-sql: true                    # 显示 SQL 查询
+    properties:
+      hibernate:
+        format_sql: true              # 格式化 SQL
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: my_new_secret_key          # 修改为新的 JWT 密钥
+  expiration: 86400000               # 设置 JWT 的有效期为 24 小时（以毫秒为单位）
